@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Skranji&family=Yanone+Kaffeesatz:wght@300;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+:root {
+  --teal: #3c788a;
+  --pink: #db847c;
+  --dark: #0a2238;
+}
+
+h1 {
+  font-family: 'Open Sans';
+}
+
+h2 {
+  font-family: 'Open Sans';
+  text-align: center;
+}
+
+p, li, label {
+  font-family: 'Open Sans';
+  font-size: 18px;
+  color: var(--dark);
+}
+
+a {
+  color: var(--dark);
+}
+
+.App {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+nav {
+  background: white;
+  padding: 10px 20px;
+  color: var(--dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%
+}
+
+nav h1 {
+  margin: 0;
+  margin-right: auto;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 0 0 16px;
+  cursor: pointer;
+}
+
+nav a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.profileForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.profileCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardWrapper {
+  width: 60%;
+  display: inline-block;
+}
+
+.profileCards li {
+  color: white;
+}
+
+input, textarea {
+  margin: 10px;
+}
+
+.logo {
+  height: 5em;
+  width: auto;
+}
+
+.btn {
+  background: var(--teal);
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  color: white;
+  width: 50%;
+}
+
+.wrapper {
+  width: 100%;
+  text-align: center; 
+  margin-top: 40px;
+}
+
+.avatar {
+  width: 10em;
+  height: auto;
+}

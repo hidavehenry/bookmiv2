@@ -1,0 +1,19 @@
+.cardArea {
+  
+}
+
+.cardWrapper {
+}
+
+.profileCards {
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: column; */
+  border: 2px solid var(--dark);
+  border-radius: 5px;
+  margin: 10px;
+  list-style: none;
+  padding: 20px;
+  background: var(--teal);
+}
+
