@@ -3,7 +3,7 @@ import { useAuthContext } from '.././hooks/useAuthContext'
 
 // firebase imports
 import { db } from '../firebase/config'
-import { collection, addDoc } from 'firebase/firestore' 
+import { doc, setDoc } from 'firebase/firestore' 
 
 export default function ProfileForm() {
   const [stageName, setStageName] = useState('')
@@ -17,9 +17,7 @@ export default function ProfileForm() {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    const ref = collection(db, 'profiles')
-
-    await addDoc(ref, {
+    await setDoc(doc(db, 'profiles', user.uid), {
       name: stageName,
       location: location,
       facebookLink: fbLink,
@@ -29,7 +27,7 @@ export default function ProfileForm() {
       uid: user.uid
     })
     .then(() =>{
-      // reset forms here
+      // reset()
     })
   }
 
