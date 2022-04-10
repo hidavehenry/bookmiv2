@@ -9,6 +9,7 @@ export default function Dashboard() {
   return (
     <div className="wrapper">
       <div className="cardArea">
+        <h2>Booking Requests:</h2>
         {inquiries && 
         <div>
           {inquiries.map(inquery  => (
