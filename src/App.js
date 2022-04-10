@@ -7,6 +7,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Navbar } from './Components/Navbar';
 import { useAuthContext } from './hooks/useAuthContext';
+import ProfileDetails from './Components/ProfileDetails'
 
 function App() {
   const { user, authIsReady } = useAuthContext()
@@ -19,6 +20,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Browse />} />
+            <Route path="/profiles/:id" element={<ProfileDetails />} />
             {user && <Route path="/profile" element={<Profile />} />}
             {user && <Route path="/dashboard" element={<Dashboard />} />}
             {!user && <Route path="/login" element={<Login />} />}

@@ -1,10 +1,33 @@
+import { useCollection } from '../hooks/useCollection'
+import Inquiries from '../Components/Inquiries'
+import { useAuthContext } from '../hooks/useAuthContext'
+
 export default function Dashboard() {
+  const { user } = useAuthContext()
+  const { documents: inquiries } = useCollection('inquiries', ['uid', '==', user.uid])
+
   return (
     <div className="wrapper">
-      <h1>Dashboard</h1>
-      <p>this is the landing page after login</p>
-      <p>here are the upcoming events</p>
-      
+      <div className="cardArea">
+        {inquiries && 
+        <div>
+          {inquiries.map(inquery  => (
+            <Inquiries
+            key={inquery.id}
+            name={inquery.name}
+            date={inquery.date}
+            venue={inquery.venue}
+            address={inquery.address}
+            length={inquery.length}
+            details={inquery.details}
+            contactName={inquery.contactName}
+            contactEmail={inquery.contactEmail}
+            inquery={inquery}
+            />
+          ))}
+        </div>
+        }
+      </div>
     </div>
   )
 }
