@@ -22,7 +22,7 @@ export default function ProfileCard({ profile }) {
 
   useEffect(() => {
     getPhoto()
-  }, [photoLink])
+  }, [])
 
 
 
