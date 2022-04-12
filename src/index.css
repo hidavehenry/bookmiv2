@@ -117,8 +117,9 @@ input, textarea {
 
 .avatar {
   width: 10em;
-  height: auto;
+  height: 10em;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .inqueryCard {
@@ -138,5 +139,5 @@ input, textarea {
 
 .icon {
   font-size: 28px;
-  margin: 0px 12px;
+  margin: 10px 12px;
 }
