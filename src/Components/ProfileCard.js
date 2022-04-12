@@ -16,15 +16,11 @@ export default function ProfileCard({ profile }) {
     const photoURL = await getDownloadURL(imageRef);
 
     setPhotoLink(photoURL)
-
   }
-
 
   useEffect(() => {
     getPhoto()
   }, [])
-
-
 
   return (
     <div className="cardWrapper">

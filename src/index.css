@@ -125,3 +125,17 @@ input, textarea {
   border-radius: 5px;
   margin: 10px 0;
 }
+
+.socialLinks {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+
+.icon {
+  font-size: 28px;
+  margin: 0px 12px;
+}
