@@ -118,6 +118,7 @@ input, textarea {
 .avatar {
   width: 10em;
   height: auto;
+  border-radius: 50%;
 }
 
 .inqueryCard {
