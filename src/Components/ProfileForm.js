@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useAuthContext } from '.././hooks/useAuthContext'
+import PhotoUpload from '.././Components/PhotoUpload'
 
 // firebase imports
 import { db } from '../firebase/config'
@@ -91,6 +92,7 @@ export default function ProfileForm() {
       </label>
       <button>Add</button>
     </form>
+    <PhotoUpload />
     </div>
   )
 }

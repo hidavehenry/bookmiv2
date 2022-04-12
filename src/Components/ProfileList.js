@@ -1,4 +1,3 @@
-import PhotoUpload from "./PhotoUpload";
 
 export default function ProfileList({ profiles }) {
 
@@ -7,7 +6,6 @@ export default function ProfileList({ profiles }) {
       <h2>Profile Preview</h2>
         {profiles.map(profile => (
           <div key={profile.id}>
-            <PhotoUpload />
             <p>{profile.name}</p> 
             <p>{profile.location}</p> 
             <p>{profile.facebookLink}, {profile.instaLink}, {profile.twitterLink}</p> 
