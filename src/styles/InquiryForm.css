@@ -1,0 +1,23 @@
+.formWrapper {
+  display: flex;
+  margin-top: 25px;
+}
+
+.inquiryForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inquiryForm input {
+  padding: 5px;
+}
+
+.inquiryForm p {
+  font-size: 12px;
+}
+
+textarea {
+  padding: 50px;
+  width: 80%;
+}

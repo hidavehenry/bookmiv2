@@ -8,7 +8,7 @@
   --dark: #0a2238;
 }
 
-h1 {
+h1, h3 {
   font-family: 'Open Sans';
 }
 
@@ -76,19 +76,13 @@ nav a {
   align-items: center;
 }
 
-.profileCards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .cardWrapper {
   width: 60%;
   display: inline-block;
 }
 
 .profileCards li {
-  color: white;
+  color: var(--dark);
 }
 
 input, textarea {
@@ -103,10 +97,24 @@ input, textarea {
 .btn {
   background: var(--teal);
   outline: none;
+  border: 1px solid var(--teal);
   border-radius: 5px;
   padding: 10px 30px;
   color: white;
   width: 50%;
+  margin: 8px;
+}
+
+.btn-decline {
+  background: white;
+  outline: none;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 10px 30px;
+  color: red;
+  width: 50%;
+  margin: 8px;
+
 }
 
 .wrapper {
@@ -140,4 +148,9 @@ input, textarea {
 .icon {
   font-size: 28px;
   margin: 10px 12px;
+}
+
+span {
+  color: var(--dark);
+  font-weight: bold;
 }
