@@ -15,6 +15,7 @@ export default function Browse() {
             key={profile.id}
             profile={profile}
             name={profile.name}
+            category={profile.category}
             location={profile.location}
             className="cardWrapper"
             />

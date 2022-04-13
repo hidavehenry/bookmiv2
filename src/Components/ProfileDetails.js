@@ -37,6 +37,7 @@ export default function ProfileDetails({ profile }) {
           {profiles.map(profile  => (
             <div key={profile.id}>
               <h1>{profile.name}</h1>
+              <h2>{profile.category}</h2>
               <p>{profile.location}</p>
               <p>{profile.bio}</p>
               <ul className="socialLinks">

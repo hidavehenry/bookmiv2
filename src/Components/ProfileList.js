@@ -8,7 +8,10 @@ export default function ProfileList({ profiles }) {
           <div key={profile.id}>
             <p>{profile.name}</p> 
             <p>{profile.location}</p> 
-            <p>{profile.facebookLink}, {profile.instaLink}, {profile.twitterLink}</p> 
+            <p>{profile.category}</p> 
+            <p>{profile.facebookLink}</p>
+            <p>{profile.instaLink}</p> 
+            <p>{profile.twitterLink}</p> 
             <p>{profile.bio}</p>
           </div>
         ))}
