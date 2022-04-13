@@ -1,19 +1,25 @@
-.cardArea {
-  
-}
-
-.cardWrapper {
-}
 
 .profileCards {
   display: flex;
   flex-direction: column;
-  /* flex-direction: column; */
   border: 2px solid var(--dark);
   border-radius: 5px;
   margin: 10px;
   list-style: none;
   padding: 20px;
-  background: var(--teal);
+  background: white;
+  align-items: center;
 }
 
+.profileCards a {
+  color: var(--pink);
+  text-decoration: none;
+}
+
+.profileCards li {
+  color: var(--teal);
+}
+
+h3 {
+  color: var(--dark);
+}

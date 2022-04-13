@@ -26,7 +26,7 @@ export default function ProfileCard({ profile }) {
     <div className="cardWrapper">
       <ul className="profileCards">
         <img className="avatar" src={photoLink} />
-        <li>{profile.name}</li>
+        <h3>{profile.name}</h3>
         <li>{profile.category}</li>
         <li>{profile.location}</li>
 

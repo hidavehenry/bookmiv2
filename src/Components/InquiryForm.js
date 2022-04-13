@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { collection, addDoc } from "firebase/firestore"; 
 import { db } from '.././firebase/config'
+import '.././styles/InquiryForm.css'
 
 export default function InquiryForm({ id }) {
   const [eventName, setEventName] = useState('')
@@ -34,8 +35,7 @@ export default function InquiryForm({ id }) {
 
   return (
     <div className="formWrapper">
-      <form onSubmit={handleSubmit}>
-        <h2>Make your booking request below</h2> 
+      <form className="inquiryForm" onSubmit={handleSubmit}>
         <label>
           <span>Event Name:</span>
           <input 
@@ -109,7 +109,7 @@ export default function InquiryForm({ id }) {
             value={moreDetails}
           />
         </label>
-        <button>Submit</button>
+        <button className="btn">Submit</button>
       </form>
     </div>
   )
