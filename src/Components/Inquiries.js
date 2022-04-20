@@ -40,10 +40,9 @@ export default function Inquiries({ inquery }) {
 
   return (
     <div className="inqueryCard">
-      <p>{inquery.status}</p>
       <h3>{inquery.name}</h3>
       <p><span>Date:</span> {inquery.date}</p>
-      <p><span>Details:</span> {inquery.details}</p>
+      <p> {inquery.details}</p>
       <p onClick={handleClick}>View More...</p>
       {expand && (
         <>
@@ -56,7 +55,8 @@ export default function Inquiries({ inquery }) {
           <button className="btn-decline" onClick={declineInvite}>Decline</button>
         </>
       )
-      }
+    }
+    <p>{inquery.status}</p>
     </div>
   )
 }

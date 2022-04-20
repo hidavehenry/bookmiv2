@@ -94,6 +94,7 @@ input, textarea {
   border: 2px solid var(--dark);
   border-radius: 5px;
   margin: 10px 0;
+  width: 100%;
 }
 
 .socialLinks {
@@ -125,3 +126,13 @@ span {
   display: flex;
   flex-direction: row;
 } */
+
+.cal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.iqCard {
+  width: 100%;
+}
