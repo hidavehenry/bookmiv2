@@ -2,14 +2,13 @@ import { auth } from '../firebase/config'
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 
-export const useGoogleSignin = () => {
+export const useGoogleSignup = () => {
   const navigate = useNavigate()
 
   const provider = new GoogleAuthProvider();
 
-
-    //Sign in with Google pop up
-  const googleSignin = () => {
+    //Sign up with Google pop up
+  const googleSignup = () => {
     signInWithPopup(auth, provider)
     .then((result) => {
       // This gives you a Google Access Token. You can use it to access the Google API.
@@ -29,8 +28,8 @@ export const useGoogleSignin = () => {
       // The AuthCredential type that was used.
       const credential = GoogleAuthProvider.credentialFromError(error);
       // ...
-    })
+    });
   }
 
-  return { googleSignin }
+  return { googleSignup }
 }

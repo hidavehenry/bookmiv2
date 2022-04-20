@@ -27,36 +27,6 @@ a {
   color: var(--dark);
 }
 
-.App {
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-nav {
-  background: white;
-  padding: 10px 20px;
-  color: var(--dark);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%
-}
-
-nav h1 {
-  margin: 0;
-  margin-right: auto;
-}
-
-nav li {
-  display: inline-block;
-  margin: 0 0 0 16px;
-  cursor: pointer;
-}
-
-nav a {
-  color: var(--dark);
-  text-decoration: none;
-}
 
 .formWrapper {
   display: flex;
@@ -64,21 +34,11 @@ nav a {
   align-items: center;
 }
 
-.profileWrapper {
-  display: flex;
-  flex-direction: column;
-}
-
 .profileForm {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
-}
-
-.cardWrapper {
-  width: 60%;
-  display: inline-block;
 }
 
 .profileCards li {
@@ -154,3 +114,14 @@ span {
   color: var(--dark);
   font-weight: bold;
 }
+
+.photoUpload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .profilePage {
+  display: flex;
+  flex-direction: row;
+} */

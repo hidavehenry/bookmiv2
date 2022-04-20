@@ -27,9 +27,9 @@ export default function PhotoUpload() {
 
   
   return (
-    <div>
+    <div className="photoUpload">
       <input required type='file' onChange={handleFileChange} />
-      <button disabled={loading || !photo} onClick={handleSubmit}>Upload</button>
+      <button className="btn" disabled={loading || !photo} onClick={handleSubmit}>Upload</button>
       <img src={photoURL} alt="avatar" className="avatar" />
     </div>
   )

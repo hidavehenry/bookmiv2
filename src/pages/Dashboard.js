@@ -9,7 +9,9 @@ export default function Dashboard() {
   return (
     <div className="wrapper">
       <div className="cardArea">
-        <h2>Booking Requests:</h2>
+        {!inquiries &&
+        <p>No booking requests at the moment.</p>
+        }
         {inquiries && 
         <div>
           {inquiries.map(inquery  => (
@@ -23,6 +25,7 @@ export default function Dashboard() {
             details={inquery.details}
             contactName={inquery.contactName}
             contactEmail={inquery.contactEmail}
+            status={inquery.status}
             inquery={inquery}
             />
           ))}

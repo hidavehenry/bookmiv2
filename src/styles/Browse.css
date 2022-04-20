@@ -1,0 +1,11 @@
+.cardArea {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardWrapper {
+  width: 100%;
+}

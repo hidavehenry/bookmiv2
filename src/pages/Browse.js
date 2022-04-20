@@ -1,5 +1,6 @@
 import { useCollection } from '../hooks/useCollection'
 import ProfileCard from '../Components/ProfileCard'
+import '../styles/Browse.css'
 
 export default function Browse() {
   const { documents: profiles } = useCollection('profiles')
@@ -9,7 +10,7 @@ export default function Browse() {
       <p>Browse through to find the perfect talent for your event, or sign up to start getting booked now!</p>
       <div className="cardArea">
         {profiles && 
-        <div>
+        <>
           {profiles.map(profile  => (
             <ProfileCard 
             key={profile.id}
@@ -20,7 +21,7 @@ export default function Browse() {
             className="cardWrapper"
             />
           ))}
-        </div>
+        </>
         }
       </div>
     </div>

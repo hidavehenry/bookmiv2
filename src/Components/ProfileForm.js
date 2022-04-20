@@ -6,6 +6,11 @@ import PhotoUpload from '.././Components/PhotoUpload'
 import { db } from '../firebase/config'
 import { doc, setDoc } from 'firebase/firestore' 
 
+//design imports
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import { MenuItem, Select, InputLabel } from '@mui/material'
+
 export default function ProfileForm() {
   const [stageName, setStageName] = useState('')
   const [category, setCategory] = useState('')
@@ -37,77 +42,85 @@ export default function ProfileForm() {
     })
   }
 
+  
   return (
     <div className="formWrapper">
       <form className="profileForm" onSubmit={handleSubmit}>
-      <label>
-        <span>Performer Name:</span>
-        <input 
-          type="text"
+        <TextField
+          variant="outlined" 
+          label="Performer Name"
+          margin="normal"
+          fullWidth
           onChange={(e) => setStageName(e.target.value)}
           value={stageName}
         />
-      </label>
-      <label>
-        <span>Location:</span>
-        <input 
-          type="text"
+        <TextField 
+          variant="outlined" 
+          label="Location"
+          margin="normal"
+          fullWidth
           onChange={(e) => setLocation(e.target.value)}
           value={location}
         />
-      </label>
-      <label>
-        <span>Type of performer:</span>
-        <select
+          <InputLabel id="demo-simple-select-label">Type of performer</InputLabel>
+        <Select
+        value="Type of performer"
+        labelId="demo-simple-select-label"
+        id="demo-simple-select"
+        fullWidth
         onChange={(e) => setCategory(e.target.value)}
         >
-          <option value="Band">Band</option>
-          <option value="DJ">DJ</option>
-          <option value="Solo Musician">Solo Musician</option>
-          <option value="Artist">Artist</option>
-          <option value="Drag Performer">Drag Performer</option>
-          <option value="Comedian">Comedian</option>
-          <option value="Magician">Magician</option>
-          <option value="Speaker">Speaker</option>
-          <option value="Host">Host</option>
-          <option value="Other">Other</option>
-        </select>
-      </label>
-      <label>
-        <span>Facebook Link:</span>
-        <input 
-          type="text"
+          <MenuItem value="Band">Band</MenuItem>
+          <MenuItem value="DJ">DJ</MenuItem>
+          <MenuItem value="Solo Musician">Solo Musician</MenuItem>
+          <MenuItem value="Artist">Artist</MenuItem>
+          <MenuItem value="Drag Performer">Drag Performer</MenuItem>
+          <MenuItem value="Comedian">Comedian</MenuItem>
+          <MenuItem value="Magician">Magician</MenuItem>
+          <MenuItem value="Speaker">Speaker</MenuItem>
+          <MenuItem value="Host">Host</MenuItem>
+          <MenuItem value="Other">Other</MenuItem>
+        </Select>
+        <TextField
+          variant="outlined" 
+          label="Facebook Link" 
+          margin="normal"
+          fullWidth
           onChange={(e) => setFbLink(e.target.value)}
           value={fbLink}
         />
-      </label>
-      <label>
-        <span>Instagram Link:</span>
-        <input 
-          type="text"
+        <TextField
+          variant="outlined" 
+          label="Instagram Link" 
+          margin="normal"
+          fullWidth
           onChange={(e) => setInstaLink(e.target.value)}
           value={instaLink}
         />
-      </label>
-      <label>
-        <span>Twitter Link:</span>
-        <input 
-          type="text"
+        <TextField
+          variant="outlined" 
+          label="Twitter Link" 
+          margin="normal"
+          fullWidth
           onChange={(e) => setTwitterLink(e.target.value)}
           value={twitterLink}
         />
-      </label>
-      <label>
-        <span>Bio:</span>
-        <textarea 
-          type="text"
+
+        <TextField
+          variant="outlined" 
+          label="Bio" 
+          multiline
+          maxRows={4}
+          defaultValue="Default Value"
+          margin="normal"
+          fullWidth
           onChange={(e) => setBio(e.target.value)}
           value={bio}
         />
-      </label>
-      <button>Add</button>
+
+      <button className="btn">Add</button>
     </form>
-    <PhotoUpload />
+    <PhotoUpload /> 
     </div>
   )
 }
