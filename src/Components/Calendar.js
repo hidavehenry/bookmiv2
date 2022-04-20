@@ -6,7 +6,7 @@ let gapi = window.gapi
 let DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
 
 const CLIENT_ID =
-  "867003229298-kcni47r8p16o8a3b82req5okds194i96.apps.googleusercontent.com";
+  "867003229298-5enmsgdle65bsvsdp2sct09m3d40lnef.apps.googleusercontent.com";
 const API_KEY = "AIzaSyBiZfERcnjMj90bBDBMwjwHiCA_UOLW0EU";
 
 // Authorization scopes required by the API; multiple scopes can be
