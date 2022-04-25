@@ -1,14 +1,17 @@
 
 .profileCards {
-  display: flex;
-  flex-direction: column;
   border: 2px solid var(--dark);
   border-radius: 5px;
-  margin: 10px;
+  margin: 3px 2px;
   list-style: none;
-  padding: 20px;
+  padding: 15px;
   background: white;
   align-items: center;
+}
+
+.profileCards:hover {
+  transform: scale(1.02);
+  transition: .2s;
 }
 
 .profileCards a {
@@ -18,8 +21,15 @@
 
 .profileCards li {
   color: var(--teal);
+  font-weight: bold;
 }
 
 h3 {
   color: var(--dark);
+  font-size: 20px;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }

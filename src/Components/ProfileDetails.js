@@ -51,6 +51,7 @@ export default function ProfileDetails({ profile }) {
         }
       <button className="btn" onClick={handleClick}>Make Inquiry</button>
       {inquiry && <InquiryForm id={id} />}
+      <div id="bottom" />
     </div>
   )
 }

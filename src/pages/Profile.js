@@ -12,8 +12,7 @@ export default function Profile() {
   )
 
   return (
-    <div className="wrapper">
-      <h1>Edit your profile</h1>
+    <div className="profilePage">
       <div>
         <ProfileForm />
       </div>

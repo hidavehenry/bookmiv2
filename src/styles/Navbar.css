@@ -1,0 +1,25 @@
+nav {
+  background: white;
+  padding: 10px 20px;
+  color: var(--dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 640px;
+}
+
+nav h1 {
+  margin: 0;
+  margin-right: auto;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 0 0 16px;
+  cursor: pointer;
+}
+
+nav a {
+  color: var(--dark);
+  text-decoration: none;
+}

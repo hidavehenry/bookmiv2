@@ -23,15 +23,13 @@ export default function ProfileCard({ profile }) {
   }, [])
 
   return (
-    <div className="cardWrapper">
-      <ul className="profileCards">
-        <img className="avatar" src={photoLink} />
-        <h3>{profile.name}</h3>
-        <li>{profile.category}</li>
-        <li>{profile.location}</li>
-
-        <p><Link to={`/profiles/${profile.id}`}>View More</Link></p>
-      </ul>
-    </div>
+      <Link to={`/profiles/${profile.id}`}>
+        <ul className="profileCards">
+          <img className="avatar" src={photoLink} />
+          <h3>{profile.name}</h3>
+          <li>{profile.category}</li>
+          <li>{profile.location}</li>
+        </ul>
+      </Link>
   )
 }

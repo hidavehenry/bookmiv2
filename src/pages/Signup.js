@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSignup } from '../hooks/useSignup'
+import { useGoogleSignup } from '../hooks/useGoogleSignup'
 
 //design imports
 import Box from '@mui/material/Box';
@@ -10,6 +11,7 @@ export default function Signup () {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { error, signup } = useSignup()
+  const { googleSignup } = useGoogleSignup()
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -41,6 +43,7 @@ export default function Signup () {
           />
           <button className="btn">Sign up</button> 
         </Box>
+        <button className="btn" onClick={googleSignup}>Sign up with Google</button>
     </div>
   )
 }
