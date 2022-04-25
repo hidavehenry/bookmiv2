@@ -2,10 +2,14 @@ import { useState } from 'react'
 import { collection, addDoc } from "firebase/firestore"; 
 import { db } from '.././firebase/config'
 import '.././styles/InquiryForm.css'
+import TextField from '@mui/material/TextField';
+import Stack from '@mui/material/Stack';
 
 export default function InquiryForm({ id }) {
   const [eventName, setEventName] = useState('')
   const [eventDate, setEventDate] = useState('')
+  const [startTime, setStartTime] = useState('')
+  const [endTime, setEndTime] = useState('')
   const [venueName, setVenueName] = useState('')
   const [venueAddress, setVenueAddress] = useState('')
   const [performanceLength, setPerformanceLength] = useState('')
@@ -21,6 +25,8 @@ export default function InquiryForm({ id }) {
     await addDoc(collection(db, 'inquiries'), {
       name: eventName,
       date: eventDate,
+      startTime: startTime,
+      endTime: endTime,
       venue: venueName,
       address: venueAddress,
       length: performanceLength,
@@ -36,15 +42,27 @@ export default function InquiryForm({ id }) {
   return (
     <div className="formWrapper">
       <form className="inquiryForm" onSubmit={handleSubmit}>
-        <label>
-          <span>Event Name:</span>
-          <input 
-            required
-            type="text"
+        <TextField
+            variant="outlined" 
+            label="Event Name"
+            margin="normal"
+            fullWidth
             onChange={(e) => setEventName(e.target.value)}
             value={eventName}
           />
-        </label>
+
+        <TextField
+            id="date"
+            label="Event Date"
+            type="date"
+            onChange={(e) => setEventDate(e.target.value)}
+            defaultValue="2017-05-24"
+            sx={{ width: 320 }}
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
+
         <label>
           <span>Event date:</span>
           <input 
@@ -54,24 +72,24 @@ export default function InquiryForm({ id }) {
             value={eventDate}
           />
         </label>
-        <label>
-          <span>Venue Name:</span>
-          <input 
-            required
-            type="text"
+
+        <TextField
+            variant="outlined" 
+            label="Venue Name"
+            margin="normal"
+            fullWidth
             onChange={(e) => setVenueName(e.target.value)}
             value={venueName}
           />
-        </label>
-        <label>
-          <span>Venue Address:</span>
-          <input 
-            required
-            type="text"
+        <TextField
+            variant="outlined" 
+            label="Venue Address"
+            margin="normal"
+            fullWidth
             onChange={(e) => setVenueAddress(e.target.value)}
             value={venueAddress}
           />
-        </label>
+          {/* Start time end time */}
         <label>
           <span>Length of Performance:</span>
           <input 
