@@ -111,7 +111,6 @@ export default function ProfileForm() {
           label="Bio" 
           multiline
           maxRows={4}
-          defaultValue="Default Value"
           margin="normal"
           fullWidth
           onChange={(e) => setBio(e.target.value)}

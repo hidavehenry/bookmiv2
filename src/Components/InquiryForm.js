@@ -3,7 +3,6 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from '.././firebase/config'
 import '.././styles/InquiryForm.css'
 import TextField from '@mui/material/TextField';
-import Stack from '@mui/material/Stack';
 
 export default function InquiryForm({ id }) {
   const [eventName, setEventName] = useState('')
@@ -41,7 +40,7 @@ export default function InquiryForm({ id }) {
 
   return (
     <div className="formWrapper">
-      <form className="inquiryForm" onSubmit={handleSubmit}>
+      <form  onSubmit={handleSubmit}>
         <TextField
             variant="outlined" 
             label="Event Name"
@@ -56,22 +55,12 @@ export default function InquiryForm({ id }) {
             label="Event Date"
             type="date"
             onChange={(e) => setEventDate(e.target.value)}
-            defaultValue="2017-05-24"
+            defaultValue="null"
             sx={{ width: 320 }}
             InputLabelProps={{
               shrink: true,
             }}
           />
-
-        <label>
-          <span>Event date:</span>
-          <input 
-            required
-            type="date"
-            onChange={(e) => setEventDate(e.target.value)}
-            value={eventDate}
-          />
-        </label>
 
         <TextField
             variant="outlined" 
@@ -91,42 +80,52 @@ export default function InquiryForm({ id }) {
           />
           {/* Start time end time */}
         <label>
-          <span>Length of Performance:</span>
+          <span>Start Time:</span>
           <input 
             required
-            type="text"
-            onChange={(e) => setPerformanceLength(e.target.value)}
-            value={performanceLength}
+            type="time"
+            onChange={(e) => setStartTime(e.target.value)}
+            value={startTime}
           />
         </label>
         <label>
-          <span>Your name:</span>
+          <span>End Time:</span>
           <input 
             required
-            type="text"
+            type="time"
+            onChange={(e) => setEndTime(e.target.value)}
+            value={endTime}
+          />
+        </label>
+
+        <TextField
+            variant="outlined" 
+            label="Your Name"
+            margin="normal"
+            fullWidth
             onChange={(e) => setContactName(e.target.value)}
             value={contactName}
           />
-        </label>
-        <label>
-          <span>Your email:</span>
-          <input 
-            required
-            type="text"
+
+        <TextField
+            variant="outlined" 
+            label="Your Email"
+            margin="normal"
+            fullWidth
             onChange={(e) => setContactEmail(e.target.value)}
             value={contactEmail}
           />
-        </label>
-        <label>
-          <span>More details:</span>
-          <p>Please include any other info such as expected audience, type of event (public/private, indoor/outdoor), etc.</p>
-          <textarea
-            required
-            type="text"
-            onChange={(e) => setMoreDetails(e.target.value)}
-            value={moreDetails}
-          />
-        </label>
+          <TextField
+          variant="outlined" 
+          label="Additional Details" 
+          multiline
+          maxRows={4}
+          margin="normal"
+          fullWidth
+          onChange={(e) => setMoreDetails(e.target.value)}
+          value={moreDetails}
+        />
+
         <button className="btn">Submit</button>
       </form>
     </div>
