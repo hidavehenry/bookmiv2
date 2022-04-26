@@ -11,7 +11,6 @@ export default function InquiryForm({ id }) {
   const [endTime, setEndTime] = useState('')
   const [venueName, setVenueName] = useState('')
   const [venueAddress, setVenueAddress] = useState('')
-  const [performanceLength, setPerformanceLength] = useState('')
   const [moreDetails, setMoreDetails] = useState('')
   const [contactName, setContactName] = useState('')
   const [contactEmail, setContactEmail] = useState('')
@@ -28,7 +27,6 @@ export default function InquiryForm({ id }) {
       endTime: endTime,
       venue: venueName,
       address: venueAddress,
-      length: performanceLength,
       details: moreDetails,
       contactName: contactName,
       contactEmail: contactEmail,
