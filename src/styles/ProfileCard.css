@@ -21,7 +21,7 @@
 
 .profileCards li {
   color: var(--teal);
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 h3 {

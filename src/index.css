@@ -54,6 +54,11 @@ input, textarea {
   width: auto;
 }
 
+.btn-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .btn {
   background: var(--teal);
   outline: none;
@@ -74,7 +79,6 @@ input, textarea {
   color: red;
   width: 50%;
   margin: 8px;
-
 }
 
 .wrapper {
@@ -84,8 +88,8 @@ input, textarea {
 }
 
 .avatar {
-  width: 10em;
-  height: 10em;
+  width: 8em;
+  height: 8em;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -133,6 +137,14 @@ span {
   width: 100%;
 }
 
+.cal-btn {
+  margin: 20px 0;
+}
+
 .iqCard {
   width: 100%;
+}
+
+.inquiry-container {
+  padding-top: 15px;
 }
