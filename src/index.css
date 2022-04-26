@@ -68,6 +68,7 @@ input, textarea {
   color: white;
   width: 50%;
   margin: 8px;
+  cursor: pointer;
 }
 
 .btn-decline {
@@ -79,6 +80,7 @@ input, textarea {
   color: red;
   width: 50%;
   margin: 8px;
+  cursor: pointer;
 }
 
 .wrapper {
@@ -88,8 +90,8 @@ input, textarea {
 }
 
 .avatar {
-  width: 8em;
-  height: 8em;
+  width: 8.5em;
+  height: 8.5em;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -139,6 +141,7 @@ span {
 
 .cal-btn {
   margin: 20px 0;
+  cursor: pointer;
 }
 
 .iqCard {

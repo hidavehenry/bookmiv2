@@ -52,6 +52,7 @@ export default function InquiryForm({ id }) {
             id="date"
             label="Event Date"
             type="date"
+            fullWidth
             onChange={(e) => setEventDate(e.target.value)}
             defaultValue="null"
             sx={{ width: 320 }}
